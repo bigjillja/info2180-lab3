@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', function(){
     let controls = document.querySelector(".controls");
     const newGame = controls.querySelector('.btn');
 
-
-
     function switch_player(){ 
         if (player == "X"){
             player = "O";
@@ -21,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 player = "X";
         }
     }
-
 
     squares.forEach(function(box, index){
         box.classList.add('square'); 
@@ -34,10 +31,7 @@ document.addEventListener('DOMContentLoaded', function(){
         box.addEventListener("mouseout",()=>{ 
             box.classList.remove("hover");
         });
-
-
-
-        
+ 
         box.addEventListener("click", function(e){ 
 
             if (gameState == true && box.innerHTML==""){
@@ -70,8 +64,7 @@ document.addEventListener('DOMContentLoaded', function(){
         
     })
 
-
-
+    
      function winner(index, player){
      
         if (index == 0){
